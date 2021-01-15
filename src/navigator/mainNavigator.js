@@ -25,7 +25,8 @@ const DrawerAppNavigator = createDrawerNavigator(
     ...AppNavigator,
   },
   {
-    contentComponent: SideMenu
+    contentComponent: SideMenu,
+    initialRouteName: "CbSplashScreen1193684", // Splash Screen
   },
 );
 
