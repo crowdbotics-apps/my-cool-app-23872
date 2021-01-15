@@ -28,5 +28,6 @@ const store = createStore(
 
 sagaMiddleware.run(rootSaga);
 sagaMiddleware.run(customRootSaga);
+sagaMiddleware.run(authRootSaga);
 
 export { store };
