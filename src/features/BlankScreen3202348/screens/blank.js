@@ -30,7 +30,7 @@ class Blank extends React.Component {
 
   render = () => (
     <ImageBackground>
-      <View>
+      <View style={styles.View_2}>
         <View style={styles.View_3}>
           <ImageBackground style={styles.ImageBackground_4}>
             <Text style={styles.Text_6}>My Photos</Text>
@@ -125,7 +125,7 @@ class Blank extends React.Component {
 
 const styles = StyleSheet.create({
   ImageBackground_1: {},
-  View_2: {},
+  View_2: { alignContent: "flex-start" },
   View_3: { fontSize: 30, color: "#330f77", fontFamily: "Lato-Regular" },
   ImageBackground_4: { width: 304, height: 38, alignItems: "center" },
   Text_6: {
