@@ -111,6 +111,9 @@ class Blank extends React.Component {
             />
           </View>
         </View>
+        <View style={styles.View_24}>
+          <View />
+        </View>
       </View>
     </ImageBackground>
   )
@@ -209,7 +212,9 @@ const styles = StyleSheet.create({
     marginRight: 5,
     alignSelf: "center"
   },
-  Image_22: { width: 91, height: 77, alignSelf: "center" }
+  Image_22: { width: 91, height: 77, alignSelf: "center" },
+  View_24: { width: "100%", height: 2 },
+  View_25: {}
 })
 
 const mapStateToProps = state => {
