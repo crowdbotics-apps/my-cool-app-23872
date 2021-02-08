@@ -81,14 +81,13 @@ const styles = StyleSheet.create({
     fontFamily: "Lato-Bold",
     textAlign: "center"
   },
-  View_7: { height: 100, justifyContent: "center", alignContent: "flex-start" },
-  View_8: {
-    width: 304,
+  View_7: {
+    width: 302,
     height: 100,
-    marginTop: 0,
-    flexDirection: "row",
-    flexWrap: "nowrap"
+    justifyContent: "center",
+    alignContent: "flex-start"
   },
+  View_8: { width: 304, height: 100, flexDirection: "row", flexWrap: "nowrap" },
   Image_10: {
     width: 170,
     height: 77,
