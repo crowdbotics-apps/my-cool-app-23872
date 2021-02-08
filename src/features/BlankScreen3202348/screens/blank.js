@@ -32,13 +32,7 @@ class Blank extends React.Component {
     <ImageBackground>
       <View>
         <View style={styles.View_3}>
-          <ImageBackground
-            source={{
-              uri:
-                "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/ca7eb669-ee08-494f-b30a-9b555089d49b.png"
-            }}
-            style={styles.ImageBackground_4}
-          >
+          <ImageBackground style={styles.ImageBackground_4}>
             <Text style={styles.Text_6}>My Photos</Text>
           </ImageBackground>
         </View>
@@ -92,6 +86,13 @@ class Blank extends React.Component {
             />
           </View>
         </View>
+        <View>
+          <View style={styles.View_19}>
+            <Image source={{ uri: "https://via.placeholder.com/150" }} />
+            <Image source={{ uri: "https://via.placeholder.com/150" }} />
+            <Image source={{ uri: "https://via.placeholder.com/150" }} />
+          </View>
+        </View>
       </View>
     </ImageBackground>
   )
@@ -101,12 +102,7 @@ const styles = StyleSheet.create({
   ImageBackground_1: {},
   View_2: {},
   View_3: { fontSize: 30, color: "#330f77", fontFamily: "Lato-Regular" },
-  ImageBackground_4: {
-    width: 304,
-    height: 38,
-    alignItems: "center",
-    backgroundSize: "contain"
-  },
+  ImageBackground_4: { width: 304, height: 38, alignItems: "center" },
   Text_6: {
     marginTop: 10,
     marginBottom: 0,
@@ -178,7 +174,12 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     marginRight: 5,
     alignSelf: "center"
-  }
+  },
+  View_18: {},
+  View_19: { width: "100%", height: 100, marginTop: 15 },
+  Image_20: {},
+  Image_21: {},
+  Image_22: {}
 })
 
 const mapStateToProps = state => {
