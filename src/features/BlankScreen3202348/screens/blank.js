@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   },
   View_29: { width: "100%" },
   View_30: { width: "100%" },
-  Image_31: { width: "100%", height: 10, marginTop: 0 },
+  Image_31: { width: "100%", height: 4 },
   View_7: {
     width: 304,
     height: 100,
