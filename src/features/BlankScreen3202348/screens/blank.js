@@ -71,11 +71,17 @@ class Blank extends React.Component {
               style={styles.Image_15}
             />
             <Image
-              source={{ uri: "https://via.placeholder.com/150" }}
+              source={{
+                uri:
+                  "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/c38c90fb-fc35-41b0-a6e8-8fb344083411.jpg"
+              }}
               style={styles.Image_16}
             />
             <Image
-              source={{ uri: "https://via.placeholder.com/150" }}
+              source={{
+                uri:
+                  "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/99031aa2-000e-42c5-acf5-6e1c53f14470.jpg"
+              }}
               style={styles.Image_17}
             />
           </View>
@@ -141,14 +147,26 @@ const styles = StyleSheet.create({
     flexWrap: "nowrap"
   },
   Image_15: {
-    width: 90,
+    width: 91,
     height: 77,
     marginLeft: 5,
     marginRight: 5,
     alignSelf: "center"
   },
-  Image_16: { width: 90, height: 77, alignSelf: "center" },
-  Image_17: { width: 90, height: 77, alignSelf: "center" }
+  Image_16: {
+    width: 91,
+    height: 77,
+    marginLeft: 5,
+    marginRight: 5,
+    alignSelf: "center"
+  },
+  Image_17: {
+    width: 91,
+    height: 77,
+    marginLeft: 5,
+    marginRight: 5,
+    alignSelf: "center"
+  }
 })
 
 const mapStateToProps = state => {
