@@ -62,8 +62,14 @@ class Blank extends React.Component {
           </View>
         </View>
         <View>
-          <View />
-          <View />
+          <View style={styles.View_14}>
+            <Image
+              source={{ uri: "https://via.placeholder.com/150" }}
+              style={styles.Image_15}
+            />
+            <Image source={{ uri: "https://via.placeholder.com/150" }} />
+            <Image source={{ uri: "https://via.placeholder.com/150" }} />
+          </View>
         </View>
       </View>
     </ImageBackground>
@@ -119,8 +125,15 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
   View_13: {},
-  View_14: {},
-  View_15: {}
+  View_14: {
+    width: "100%",
+    height: 100,
+    flexDirection: "row",
+    flexWrap: "nowrap"
+  },
+  Image_15: { width: 170, height: 77 },
+  Image_16: {},
+  Image_17: {}
 })
 
 const mapStateToProps = state => {
