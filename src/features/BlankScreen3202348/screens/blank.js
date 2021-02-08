@@ -32,9 +32,15 @@ class Blank extends React.Component {
     <ImageBackground>
       <View>
         <View style={styles.View_3}>
-          <View style={styles.View_4}>
+          <ImageBackground
+            source={{
+              uri:
+                "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/ca7eb669-ee08-494f-b30a-9b555089d49b.png"
+            }}
+            style={styles.ImageBackground_4}
+          >
             <Text style={styles.Text_6}>My Photos</Text>
-          </View>
+          </ImageBackground>
         </View>
         <View style={styles.View_7}>
           <View style={styles.View_8}>
@@ -95,7 +101,12 @@ const styles = StyleSheet.create({
   ImageBackground_1: {},
   View_2: {},
   View_3: { fontSize: 30, color: "#330f77", fontFamily: "Lato-Regular" },
-  View_4: { width: 304, height: 38, alignItems: "center" },
+  ImageBackground_4: {
+    width: 304,
+    height: 38,
+    alignItems: "center",
+    backgroundSize: "contain"
+  },
   Text_6: {
     marginTop: 10,
     marginBottom: 0,
@@ -140,7 +151,7 @@ const styles = StyleSheet.create({
     marginRight: 5,
     alignSelf: "center"
   },
-  View_13: { paddingTop: 20 },
+  View_13: { paddingTop: 15 },
   View_14: {
     width: "100%",
     height: 100,
