@@ -29,12 +29,7 @@ class Blank extends React.Component {
   }
 
   render = () => (
-    <ImageBackground
-      source={{
-        uri:
-          "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/ca7eb669-ee08-494f-b30a-9b555089d49b.png"
-      }}
-    >
+    <ImageBackground>
       <View style={styles.View_2}>
         <View style={styles.View_3}>
           <View style={styles.View_4}>
@@ -65,6 +60,10 @@ class Blank extends React.Component {
               style={styles.Image_12}
             />
           </View>
+        </View>
+        <View>
+          <View />
+          <View />
         </View>
       </View>
     </ImageBackground>
@@ -118,7 +117,10 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     marginRight: 5,
     alignSelf: "center"
-  }
+  },
+  View_13: {},
+  View_14: {},
+  View_15: {}
 })
 
 const mapStateToProps = state => {
