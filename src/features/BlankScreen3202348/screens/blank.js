@@ -137,8 +137,13 @@ class Blank extends React.Component {
 const styles = StyleSheet.create({
   ImageBackground_1: {},
   View_2: { alignContent: "flex-start" },
-  View_3: { fontSize: 30, color: "#330f77", fontFamily: "Lato-Regular" },
-  ImageBackground_4: { width: 304, height: 38, alignItems: "center" },
+  View_3: {
+    width: "100%",
+    fontSize: 30,
+    color: "#330f77",
+    fontFamily: "Lato-Regular"
+  },
+  ImageBackground_4: { width: "100%", height: 38, alignItems: "center" },
   Text_6: {
     marginTop: 10,
     marginBottom: 0,
@@ -150,7 +155,7 @@ const styles = StyleSheet.create({
   },
   View_29: { width: "100%" },
   View_30: { width: "100%" },
-  Image_31: { width: "100%", height: 10, marginTop: 8 },
+  Image_31: { width: "100%", height: 10, marginTop: 0 },
   View_7: {
     width: 304,
     height: 100,
@@ -240,7 +245,7 @@ const styles = StyleSheet.create({
   View_24: {
     width: "100%",
     height: 40,
-    marginTop: 110,
+    marginTop: 99,
     alignSelf: "flex-start",
     alignContent: "space-around"
   },
