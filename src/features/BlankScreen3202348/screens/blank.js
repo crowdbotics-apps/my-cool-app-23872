@@ -86,7 +86,7 @@ class Blank extends React.Component {
             />
           </View>
         </View>
-        <View>
+        <View style={styles.View_18}>
           <View style={styles.View_19}>
             <Image
               source={{
@@ -113,8 +113,8 @@ class Blank extends React.Component {
         </View>
         <View style={styles.View_24}>
           <View style={styles.View_25}>
-            <Icon name="star" />
-            <Icon name="star" />
+            <Icon name="star" style={styles.Icon_26} />
+            <Icon name="star" style={styles.Icon_27} />
             <Icon name="star" style={styles.Icon_28} />
           </View>
         </View>
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
     marginRight: 5,
     alignSelf: "center"
   },
-  View_18: {},
+  View_18: { width: "100%" },
   View_19: { width: "100%", height: 100, marginTop: 15, flexDirection: "row" },
   Image_20: {
     width: 91,
@@ -216,7 +216,13 @@ const styles = StyleSheet.create({
     marginRight: 5,
     alignSelf: "center"
   },
-  Image_22: { width: 91, height: 77, alignSelf: "center" },
+  Image_22: {
+    width: 91,
+    height: 77,
+    marginLeft: 5,
+    marginRight: 5,
+    alignSelf: "center"
+  },
   View_24: {
     width: "100%",
     height: 40,
@@ -226,13 +232,14 @@ const styles = StyleSheet.create({
   },
   View_25: {
     width: "100%",
+    backgroundColor: "#330f77",
     flexDirection: "row",
     justifyContent: "space-around",
     alignContent: "space-between"
   },
-  Icon_26: {},
-  Icon_27: {},
-  Icon_28: { alignSelf: "center" }
+  Icon_26: { color: "#ffffff", backgroundColor: "#330f77" },
+  Icon_27: { color: "#ffffff", backgroundColor: "#330f77" },
+  Icon_28: { alignSelf: "center", color: "#ffffff", backgroundColor: "#330f77" }
 })
 
 const mapStateToProps = state => {
