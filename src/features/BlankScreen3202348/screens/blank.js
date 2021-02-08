@@ -112,7 +112,11 @@ class Blank extends React.Component {
           </View>
         </View>
         <View style={styles.View_24}>
-          <View />
+          <View style={styles.View_25}>
+            <Icon name="star" />
+            <Icon name="star" />
+            <Icon name="star" style={styles.Icon_28} />
+          </View>
         </View>
       </View>
     </ImageBackground>
@@ -220,7 +224,15 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
     alignContent: "space-around"
   },
-  View_25: {}
+  View_25: {
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignContent: "space-between"
+  },
+  Icon_26: {},
+  Icon_27: {},
+  Icon_28: { alignSelf: "center" }
 })
 
 const mapStateToProps = state => {
