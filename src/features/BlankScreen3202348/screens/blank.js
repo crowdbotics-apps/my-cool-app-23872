@@ -64,11 +64,20 @@ class Blank extends React.Component {
         <View>
           <View style={styles.View_14}>
             <Image
-              source={{ uri: "https://via.placeholder.com/150" }}
+              source={{
+                uri:
+                  "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/03e210f9-952c-44c9-b563-bb25bb9ed0da.jpg"
+              }}
               style={styles.Image_15}
             />
-            <Image source={{ uri: "https://via.placeholder.com/150" }} />
-            <Image source={{ uri: "https://via.placeholder.com/150" }} />
+            <Image
+              source={{ uri: "https://via.placeholder.com/150" }}
+              style={styles.Image_16}
+            />
+            <Image
+              source={{ uri: "https://via.placeholder.com/150" }}
+              style={styles.Image_17}
+            />
           </View>
         </View>
       </View>
@@ -131,9 +140,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "nowrap"
   },
-  Image_15: { width: 170, height: 77 },
-  Image_16: {},
-  Image_17: {}
+  Image_15: {
+    width: 90,
+    height: 77,
+    marginLeft: 5,
+    marginRight: 5,
+    alignSelf: "center"
+  },
+  Image_16: { width: 90, height: 77, alignSelf: "center" },
+  Image_17: { width: 90, height: 77, alignSelf: "center" }
 })
 
 const mapStateToProps = state => {
