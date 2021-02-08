@@ -93,7 +93,7 @@ class Blank extends React.Component {
 
 const styles = StyleSheet.create({
   ImageBackground_1: {},
-  View_2: { backgroundColor: "#f0e2f8" },
+  View_2: { backgroundColor: "#ffffff" },
   View_3: { fontSize: 30, color: "#330f77", fontFamily: "Lato-Regular" },
   View_4: { width: 304, height: 38, alignItems: "center" },
   Text_6: {
@@ -108,6 +108,7 @@ const styles = StyleSheet.create({
   View_7: {
     width: 304,
     height: 100,
+    marginTop: 25,
     flexWrap: "nowrap",
     justifyContent: "center",
     alignContent: "flex-start"
