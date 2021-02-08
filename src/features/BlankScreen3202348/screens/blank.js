@@ -88,9 +88,27 @@ class Blank extends React.Component {
         </View>
         <View>
           <View style={styles.View_19}>
-            <Image source={{ uri: "https://via.placeholder.com/150" }} />
-            <Image source={{ uri: "https://via.placeholder.com/150" }} />
-            <Image source={{ uri: "https://via.placeholder.com/150" }} />
+            <Image
+              source={{
+                uri:
+                  "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/8e8874bd-2135-4580-bae3-d4da17e74846.jpg"
+              }}
+              style={styles.Image_20}
+            />
+            <Image
+              source={{
+                uri:
+                  "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/3111198a-2715-412a-826d-fb64d00f720a.jpg"
+              }}
+              style={styles.Image_21}
+            />
+            <Image
+              source={{
+                uri:
+                  "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/fc6adb22-3be8-4569-a5cb-9b8d2530a867.jpg"
+              }}
+              style={styles.Image_22}
+            />
           </View>
         </View>
       </View>
@@ -176,10 +194,22 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
   View_18: {},
-  View_19: { width: "100%", height: 100, marginTop: 15 },
-  Image_20: {},
-  Image_21: {},
-  Image_22: {}
+  View_19: { width: "100%", height: 100, marginTop: 15, flexDirection: "row" },
+  Image_20: {
+    width: 91,
+    height: 77,
+    marginLeft: 5,
+    marginRight: 5,
+    alignSelf: "center"
+  },
+  Image_21: {
+    width: 91,
+    height: 77,
+    marginLeft: 5,
+    marginRight: 5,
+    alignSelf: "center"
+  },
+  Image_22: { width: 91, height: 77, alignSelf: "center" }
 })
 
 const mapStateToProps = state => {
