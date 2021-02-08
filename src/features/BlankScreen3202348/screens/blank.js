@@ -29,26 +29,36 @@ class Blank extends React.Component {
   }
 
   render = () => (
-    <ImageBackground
-      source={{
-        uri:
-          "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/ca7eb669-ee08-494f-b30a-9b555089d49b.png"
-      }}
-    >
+    <ImageBackground>
       <View style={styles.View_2}>
         <View style={styles.View_3}>
           <View style={styles.View_4}>
             <Text style={styles.Text_6}>My Photos</Text>
           </View>
         </View>
-        <View>
+        <View style={styles.View_7}>
           <View style={styles.View_8}>
             <Image
-              source={{ uri: "https://via.placeholder.com/150" }}
+              source={{
+                uri:
+                  "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/d2c8f193-f305-40c3-bb1e-a8a0eff73d04.jpg"
+              }}
               style={styles.Image_10}
             />
-            <Image source={{ uri: "https://via.placeholder.com/150" }} />
-            <Image source={{ uri: "https://via.placeholder.com/150" }} />
+            <Image
+              source={{
+                uri:
+                  "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/cb6cd462-831c-497a-b712-bf5293c91da3.jpg"
+              }}
+              style={styles.Image_11}
+            />
+            <Image
+              source={{
+                uri:
+                  "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/23872/82cdf786-252c-4830-8f23-47d756a22bc1.jpg"
+              }}
+              style={styles.Image_12}
+            />
           </View>
           <View />
         </View>
@@ -71,19 +81,38 @@ const styles = StyleSheet.create({
     fontFamily: "Lato-Bold",
     textAlign: "center"
   },
-  View_7: {},
+  View_7: { height: 100, justifyContent: "center", alignContent: "flex-start" },
   View_8: {
     width: 304,
     height: 100,
-    marginTop: 25,
+    marginTop: 0,
     flexDirection: "row",
     flexWrap: "nowrap"
   },
-  Image_10: { height: "100%", marginLeft: 5, marginRight: 5 },
-  Image_11: {},
-  Image_12: {},
+  Image_10: {
+    width: 170,
+    height: 77,
+    marginLeft: 5,
+    marginRight: 5,
+    alignSelf: "center"
+  },
+  Image_11: {
+    width: 170,
+    height: 77,
+    marginLeft: 5,
+    marginRight: 5,
+    alignSelf: "center"
+  },
+  Image_12: {
+    width: 170,
+    height: 77,
+    marginLeft: 5,
+    marginRight: 5,
+    alignSelf: "center"
+  },
   View_9: {}
 })
+
 const mapStateToProps = state => {
   return {}
 }
