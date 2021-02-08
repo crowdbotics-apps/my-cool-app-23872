@@ -213,7 +213,13 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
   Image_22: { width: 91, height: 77, alignSelf: "center" },
-  View_24: { width: "100%", height: 2 },
+  View_24: {
+    width: "100%",
+    height: 40,
+    marginTop: 110,
+    alignSelf: "flex-start",
+    alignContent: "space-around"
+  },
   View_25: {}
 })
 
