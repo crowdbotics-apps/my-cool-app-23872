@@ -175,14 +175,35 @@ const styles = StyleSheet.create({
     height: 77,
     marginLeft: 5,
     marginRight: 5,
-    alignSelf: "center"
+    paddingLeft: 3,
+    paddingRight: 3,
+    paddingTop: 3,
+    paddingBottom: 3,
+    alignSelf: "center",
+    borderColor: "#330f77",
+    borderWidth: 1,
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderRadius: 2
   },
   Image_11: {
     width: 170,
     height: 77,
     marginLeft: 5,
     marginRight: 5,
-    alignSelf: "center"
+    paddingLeft: 3,
+    paddingRight: 3,
+    paddingTop: 3,
+    paddingBottom: 3,
+    alignSelf: "center",
+    borderColor: "#330f77",
+    borderWidth: 1,
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    borderTopWidth: 1,
+    borderBottomWidth: 1
   },
   Image_12: {
     width: 170,
