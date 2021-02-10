@@ -9,80 +9,123 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('contact', '0001_initial'),
+        ("contact", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='profile',
-            name='birthdate',
+            model_name="profile",
+            name="birthdate",
             field=models.BigIntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='gender',
+            model_name="profile",
+            name="gender",
             field=models.CharField(blank=True, max_length=256, null=True),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='last_login',
+            model_name="profile",
+            name="last_login",
             field=models.DateTimeField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='last_updated',
+            model_name="profile",
+            name="last_updated",
             field=models.DateField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='mobile_number',
+            model_name="profile",
+            name="mobile_number",
             field=models.CharField(blank=True, max_length=256, null=True),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='photo',
+            model_name="profile",
+            name="photo",
             field=models.URLField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='pin',
+            model_name="profile",
+            name="pin",
             field=models.CharField(blank=True, max_length=256, null=True),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='status',
+            model_name="profile",
+            name="status",
             field=models.CharField(blank=True, max_length=256, null=True),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='timestamp_created',
+            model_name="profile",
+            name="timestamp_created",
             field=models.DateTimeField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='profile',
-            name='user',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='profile_user', to=settings.AUTH_USER_MODEL),
+            model_name="profile",
+            name="user",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="profile_user",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
         migrations.CreateModel(
-            name='VerificationCode',
+            name="VerificationCode",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('code', models.CharField(max_length=256)),
-                ('is_verified', models.BooleanField()),
-                ('timestamp_created', models.DateTimeField()),
-                ('timestamp_verified', models.DateTimeField()),
-                ('sent_to', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='verificationcode_sent_to', to='contact.Profile')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("code", models.CharField(max_length=256)),
+                ("is_verified", models.BooleanField()),
+                ("timestamp_created", models.DateTimeField()),
+                ("timestamp_verified", models.DateTimeField()),
+                (
+                    "sent_to",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="verificationcode_sent_to",
+                        to="contact.Profile",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Contact',
+            name="Contact",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('is_blocked', models.BooleanField()),
-                ('is_favorite', models.BooleanField()),
-                ('timestamp_created', models.DateTimeField()),
-                ('added_by', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='contact_added_by', to=settings.AUTH_USER_MODEL)),
-                ('added_profile', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='contact_added_profile', to='contact.Profile')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("is_blocked", models.BooleanField()),
+                ("is_favorite", models.BooleanField()),
+                ("timestamp_created", models.DateTimeField()),
+                (
+                    "added_by",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="contact_added_by",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "added_profile",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="contact_added_profile",
+                        to="contact.Profile",
+                    ),
+                ),
             ],
         ),
     ]

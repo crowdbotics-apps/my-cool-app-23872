@@ -5,32 +5,32 @@ from django.db import models
 class Profile(models.Model):
     "Generated Model"
     mobile_number = models.CharField(
-        max_length=256,
         null=True,
         blank=True,
+        max_length=256,
     )
     pin = models.CharField(
-        max_length=256,
         null=True,
         blank=True,
+        max_length=256,
     )
     photo = models.URLField(
         null=True,
         blank=True,
     )
     status = models.CharField(
-        max_length=256,
         null=True,
         blank=True,
+        max_length=256,
     )
     birthdate = models.BigIntegerField(
         null=True,
         blank=True,
     )
     gender = models.CharField(
-        max_length=256,
         null=True,
         blank=True,
+        max_length=256,
     )
     timestamp_created = models.DateTimeField(
         null=True,
@@ -46,9 +46,9 @@ class Profile(models.Model):
     )
     user = models.OneToOneField(
         "users.User",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="profile_user",
     )
 
