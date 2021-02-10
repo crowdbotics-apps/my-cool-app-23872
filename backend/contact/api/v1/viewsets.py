@@ -1,6 +1,10 @@
 from rest_framework import authentication
-from contact.models import Profile
-from .serializers import ProfileSerializer
+from contact.models import Contact, Profile, VerificationCode
+from .serializers import (
+    ContactSerializer,
+    ProfileSerializer,
+    VerificationCodeSerializer,
+)
 from rest_framework import viewsets
 
 
@@ -11,3 +15,21 @@ class ProfileViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = Profile.objects.all()
+
+
+class ContactViewSet(viewsets.ModelViewSet):
+    serializer_class = ContactSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = Contact.objects.all()
+
+
+class VerificationCodeViewSet(viewsets.ModelViewSet):
+    serializer_class = VerificationCodeSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = VerificationCode.objects.all()
