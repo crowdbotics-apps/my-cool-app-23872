@@ -7,105 +7,220 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('contact', '0002_auto_20210210_1828'),
-        ('message', '0001_initial'),
+        ("contact", "0002_auto_20210210_1828"),
+        ("message", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Thread',
+            name="Thread",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=256)),
-                ('thread_photo', models.URLField()),
-                ('timestamp_created', models.DateTimeField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=256)),
+                ("thread_photo", models.URLField()),
+                ("timestamp_created", models.DateTimeField()),
             ],
         ),
         migrations.AddField(
-            model_name='message',
-            name='attachment',
+            model_name="message",
+            name="attachment",
             field=models.URLField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='message',
-            name='is_delivered',
+            model_name="message",
+            name="is_delivered",
             field=models.BooleanField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='message',
-            name='is_draft',
+            model_name="message",
+            name="is_draft",
             field=models.BooleanField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='message',
-            name='is_read',
+            model_name="message",
+            name="is_read",
             field=models.BooleanField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='message',
-            name='timestamp_created',
+            model_name="message",
+            name="timestamp_created",
             field=models.DateTimeField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='message',
-            name='timestamp_delivered',
+            model_name="message",
+            name="timestamp_delivered",
             field=models.DateTimeField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='message',
-            name='timestamp_read',
+            model_name="message",
+            name="timestamp_read",
             field=models.DateTimeField(blank=True, null=True),
         ),
         migrations.CreateModel(
-            name='ThreadMember',
+            name="ThreadMember",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('is_admin', models.BooleanField()),
-                ('timestamp_joined', models.DateTimeField()),
-                ('timestamp_left', models.DateTimeField()),
-                ('last_rejoined', models.DateTimeField()),
-                ('profile', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='threadmember_profile', to='contact.Profile')),
-                ('thread', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='threadmember_thread', to='message.Thread')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("is_admin", models.BooleanField()),
+                ("timestamp_joined", models.DateTimeField()),
+                ("timestamp_left", models.DateTimeField()),
+                ("last_rejoined", models.DateTimeField()),
+                (
+                    "profile",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="threadmember_profile",
+                        to="contact.Profile",
+                    ),
+                ),
+                (
+                    "thread",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="threadmember_thread",
+                        to="message.Thread",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='ThreadAction',
+            name="ThreadAction",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('action', models.CharField(max_length=256)),
-                ('timestamp_action', models.DateTimeField()),
-                ('profile', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='threadaction_profile', to='contact.Profile')),
-                ('thread', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='threadaction_thread', to='message.Thread')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("action", models.CharField(max_length=256)),
+                ("timestamp_action", models.DateTimeField()),
+                (
+                    "profile",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="threadaction_profile",
+                        to="contact.Profile",
+                    ),
+                ),
+                (
+                    "thread",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="threadaction_thread",
+                        to="message.Thread",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='MessageAction',
+            name="MessageAction",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('action', models.CharField(max_length=256)),
-                ('timestamp_action', models.DateTimeField()),
-                ('message', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='messageaction_message', to='message.Message')),
-                ('profile', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='messageaction_profile', to='contact.Profile')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("action", models.CharField(max_length=256)),
+                ("timestamp_action", models.DateTimeField()),
+                (
+                    "message",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="messageaction_message",
+                        to="message.Message",
+                    ),
+                ),
+                (
+                    "profile",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="messageaction_profile",
+                        to="contact.Profile",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='ForwardedMessage',
+            name="ForwardedMessage",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('timestamp_forwarded', models.DateTimeField()),
-                ('forwarded_by', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='forwardedmessage_forwarded_by', to='contact.Profile')),
-                ('forwarded_to', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='forwardedmessage_forwarded_to', to='message.Thread')),
-                ('message', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='forwardedmessage_message', to='message.Message')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("timestamp_forwarded", models.DateTimeField()),
+                (
+                    "forwarded_by",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="forwardedmessage_forwarded_by",
+                        to="contact.Profile",
+                    ),
+                ),
+                (
+                    "forwarded_to",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="forwardedmessage_forwarded_to",
+                        to="message.Thread",
+                    ),
+                ),
+                (
+                    "message",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="forwardedmessage_message",
+                        to="message.Message",
+                    ),
+                ),
             ],
         ),
         migrations.AddField(
-            model_name='message',
-            name='sent_by',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='message_sent_by', to='message.ThreadMember'),
+            model_name="message",
+            name="sent_by",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="message_sent_by",
+                to="message.ThreadMember",
+            ),
         ),
         migrations.AddField(
-            model_name='message',
-            name='thread',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='message_thread', to='message.Thread'),
+            model_name="message",
+            name="thread",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="message_thread",
+                to="message.Thread",
+            ),
         ),
     ]

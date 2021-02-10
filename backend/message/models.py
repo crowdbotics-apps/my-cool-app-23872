@@ -9,16 +9,16 @@ class Message(models.Model):
     )
     thread = models.OneToOneField(
         "message.Thread",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="message_thread",
     )
     sent_by = models.OneToOneField(
         "message.ThreadMember",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="message_sent_by",
     )
     attachment = models.URLField(
